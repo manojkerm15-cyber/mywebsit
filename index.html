@@ -1,39 +1,11 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Website</title>
+    <title>Manoj's Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        .popup {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
-}
-
-.popup-content {
-    margin: auto;
-    display: block;
-    width: 60%;
-    max-width: 500px;
-}
-
-.close {
-    position: absolute;
-    top: 40px;
-    right: 60px;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-}
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -75,6 +47,17 @@
             font-size: 20px;
         }
 
+        /* Profile Image */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 4px solid white;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
         /* Section */
         section {
             padding: 60px 20px;
@@ -107,9 +90,37 @@
         button:hover {
             background: #ddd;
         }
-    </style>
 
-}
+        /* Popup */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .popup-content {
+            margin: auto;
+            display: block;
+            width: 60%;
+            max-width: 500px;
+        }
+
+        .close {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 
 <body>
 
@@ -120,44 +131,50 @@
     </nav>
 
     <div class="hero">
-        <h1>Welcome to Manoj's Website</h1>
-        <img src="profile.jpg" alt="My Photo" class="profile-pic" onclick="openPopup()">
-        <p>Mechanical Engineering Geaduat</p>
-        <button onclick="alert('Hello! Welcome 😊')">Click Me</button>
+        <h1>Hi, I'm Manoj</h1>
+
+        <img src="your name.jpeg" alt="My Photo" class="profile-pic" onclick="openPopup()">
+
+        <p>Hi, I'm Manoj K Welcome to my page</p>
+        <button onclick="alert('Hello! Welcome 😂')">Click Me</button>
     </div>
 
     <section id="about">
         <div class="box">
             <h2>About Us</h2>
-            <p>I'm a BE mechanical Engineer seeking for job</p>
+            <p>
+                This website is created by a B.E Mechanical Engineer graduat Anna University
+            </p>
         </div>
     </section>
 
     <section id="contact">
         <div class="box">
             <h2>Contact</h2>
-            <p>Email: 123@gmail.com</p>
-            <p>Phone: +91 0000000000</p>
+            <p>Email: example@email.com</p>
+            <p>Phone: +91 00000000</p>
         </div>
     </section>
 
     <footer>
-        © 2026 My Website | All Rights Reserved.
+        © 2026 Manoj's Website | All Rights Reserved
     </footer>
-    
-</body>
+
     <!-- Image Popup -->
-<div id="imagePopup" class="popup">
-    <span class="close" onclick="closePopup()">&times;</span>
-    <img class="popup-content" src="profile.jpg">
-</div>
+    <div id="imagePopup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img class="popup-content" src="profile.jpg">
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById("imagePopup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("imagePopup").style.display = "none";
+        }
+    </script>
+
+</body>
 </html>
-
-
-
-
-
-
-
-
-
