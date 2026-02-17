@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <title>My Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.popup-content {
+    margin: auto;
+    display: block;
+    width: 60%;
+    max-width: 500px;
+}
+
+.close {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
 
     <style>
         body {
@@ -80,17 +107,8 @@
             background: #ddd;
         }
     </style>
-    .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
-    border: 4px solid white;
-    object-fit: cover;
-}
 
 }
-</head>
 
 <body>
 
@@ -102,7 +120,7 @@
 
     <div class="hero">
         <h1>Welcome to Manoj's Website</h1>
-        <img src="profile.jpg" alt="My Photo" class="profile-pic">
+        <img src="profile.jpg" alt="My Photo" class="profile-pic" onclick="openPopup()">
         <p>Mechanical Engineering Geaduat</p>
         <button onclick="alert('Hello! Welcome 😊')">Click Me</button>
     </div>
@@ -110,7 +128,7 @@
     <section id="about">
         <div class="box">
             <h2>About Us</h2>
-            
+            <p>I'm a BE mechanical Engineer seeking for job</p>
         </div>
     </section>
 
@@ -123,12 +141,19 @@
     </section>
 
     <footer>
-        © 2026 My Website | All Rights Reserved
+        © 2026 My Website | All Rights Reserved🙂
     </footer>
-
+    
+    <!-- Image Popup -->
+<div id="imagePopup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" src="profile.jpg">
+</div>
+    
 </body>
 
 </html>
+
 
 
 
